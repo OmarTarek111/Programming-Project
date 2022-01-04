@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1641304299 source:d:\assignment\dotsandlines\programmingproject\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	"inGameActions.h"
+	"aicomp.h"
+
+1641302220 d:\assignment\dotsandlines\programmingproject\ingameactions.h
+
+1641238765 d:\assignment\dotsandlines\programmingproject\aicomp.h
+
+1641238765 source:d:\assignment\dotsandlines\programmingproject\computerplayer.c
+	<stdio.h>
+	<stdlib.h>
+
+1641304046 source:d:\assignment\dotsandlines\programmingproject\game modes.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	"inGameActions.h"
+
+1641238765 source:d:\assignment\dotsandlines\programmingproject\grid function.c
+	<stdio.h>
+	<stdlib.h>
+
+1641304278 source:d:\assignment\dotsandlines\programmingproject\ingameactions.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+
