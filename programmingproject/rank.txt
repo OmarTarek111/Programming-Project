@@ -1,19 +1,19 @@
-14  Computer
-2    marwn
+23                  Computer
 
-1        asd
+14                                                      Computer
 
-1      Computer
+4        asd
 
-0        
+3                              Computer
 
-0        
+3                          Computer
 
-0        
+3          sad
 
-0        
+3  Computer
+2                                                        marwn
 
-0        
+2                                                  ads
 
-0        
+2                                              ads
 

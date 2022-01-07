@@ -37,13 +37,14 @@
 		<Unit filename="Game Modes.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="GameModes.h" />
 		<Unit filename="Grid Function.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Grid.h" />
 		<Unit filename="InGameActions.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="aicomp.h" />
 		<Unit filename="inGameActions.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

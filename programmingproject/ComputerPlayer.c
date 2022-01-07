@@ -54,7 +54,7 @@ int checkSquares(int v1, int v2, int *point, int nd, int ndl, int gameArr[], int
 
 void computerGuide(int *computerScore, int nd, int ndl, int *input, int gameArr[], int *flag, int *s1, int *s2)
 {
-    printf("\nThe computer' turn        Score:%d\n",*computerScore);
+    sleep(1);
     int point; int index1=0; int index2=0;
     if(checkSquares(3,3,&point,nd,ndl,gameArr,&index1,&index2));
     else if(checkSquares(3,2,&point,nd,ndl,gameArr,&index1,&index2));
@@ -72,7 +72,6 @@ void computerGuide(int *computerScore, int nd, int ndl, int *input, int gameArr[
     else if(checkSquares(2,2,&point,nd,ndl,gameArr,&index1,&index2));
     *input=(point+1)/2; *s1=index1; *s2=index2;
     gameArr[point]=12; gameArr[index1]++;
-    printf("index1=%d,index2=%d",gameArr[point],index2);
     if(index2)
         gameArr[index2]++;
     if(gameArr[index1]==4)

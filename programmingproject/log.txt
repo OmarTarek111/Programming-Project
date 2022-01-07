@@ -1,15 +1,11 @@
-Game Mode: Player VS Computer
-Turn = 40
-marwn's Score = 2	Computer's Score = 14
-.--.--.--.--.
-|  |  |  |  |
-.--.--.--.--.
-|  |  |  |  |
-.--.--.--.--.
-|  |  |  |  |
-.--.--.--.--.
-|  |  |  |  |
-.--.--.--.--.
+Game Mode: Player VS Player
+.__.  .
+     
+.  .  .
+     
+.  .  .
+Turn = 2
+w's Score = 0	s's Score = 0
 
 
 
