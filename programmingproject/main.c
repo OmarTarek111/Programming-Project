@@ -17,7 +17,7 @@
 #define RESET "\x1b[0m"
 #include "inGameActions.h"
 
-#include "aicomp.h"
+#include "GameModes.h"
 
 struct {
     char name[10];
@@ -41,25 +41,16 @@ void changeTurn(char currentPlayer[], int ** currentScore, int ** currentIndex) 
     }
 }
 
-void endGame(char player1[], int player1Score, char player2[], int player2Score) {
-    if (player1Score > player2Score)
-        printf(RED "\n%s"
-            YELLOW " WON!!!\n"
-            RESET, player1);
-    else if (player1Score < player2Score)
-        printf(BLUE "\n%s"
-            YELLOW " WON!!!\n"
-            RESET, player2);
-    else
-        printf(BLUE "\nDraw.\n"
-            RESET);
-}
-
 int main() {
-    system("");
-    int nd, ndl, cells, gameMode, wrong, input, computerScore = 1, currentIndex, gameArr[300] = {
-        0
-    }, saved, turn, remainingSquares, navigate;
+    jmp:
+    system("cls");
+    int wrong, navigate;
+    /*wrong is used to determine whether the input is wrong or not, navigate is used to navigate the main menu*/
+    int nd, ndl, cells, gameMode, computerScore, currentIndex, gameArr[300] = {0}, turn, remainingSquares;
+    /*The main variables used in the game loop
+    nd is the number of dots in a row, ndl is the number of dots and lines in a row, cells is the required size of the array,
+    remaininingSquares is the number of squares still still empty in the game.
+    */
     char term;
     printf(YELLOW "\n\n\n\n\n\n\n\t\t\t\t\tWELOCOME TO DOTS AND BOXES!!"
         RESET);
@@ -79,9 +70,11 @@ int main() {
             wrong = 0;
     } while (wrong);
     if (navigate == 2) {
+
         load(player1.name, & player1.score, player2.name, & player2.score, & computerScore, & currentIndex, & turn, & nd, & ndl, & cells, & remainingSquares, gameArr, & gameMode);
-        printf("computer%d", computerScore);
+
     } else if (navigate == 1) {
+
         system("cls");
 
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t1."
@@ -114,8 +107,9 @@ int main() {
         ndl = 2 * nd - 1;
         cells = (int) pow(ndl, 2);
         generateGrid(nd, ndl, cells, gameArr);
-        turn = 0;
+        turn = 1;
         computerScore = 0;
+
     } else {
         return 0;
     }
@@ -131,16 +125,18 @@ int main() {
             scanf("%s", & * player2.name);
             currentIndex = player1.index;
         }
-        PlayerVsPlayer(player1.name, player1.score, player1.index, player2.name, player2.score, player2.index, & currentIndex, remainingSquares, gameArr, turn, nd, ndl, cells);
+        PlayerVsPlayer(player1.name, player1.score, player1.index, player2.name, player2.score, player2.index, currentIndex, remainingSquares, gameArr, turn, nd, ndl, cells, &navigate);
         break;
     case 2:
         if (navigate == 1) {
             printf(RED "\n\t\t\t\t\tEnter player name: ");
             scanf("%s", & * player1.name);
         }
-        PlayerVsComputer(player1.name, player1.score, player1.index, computerScore, remainingSquares, gameArr, turn, nd, ndl, cells);
+        PlayerVsComputer(player1.name, player1.score, player1.index, computerScore, remainingSquares, gameArr, turn, nd, ndl, cells, &navigate);
         break;
     }
     system("pause");
+    if(navigate==-3)
+        goto jmp;
     return 0;
 }
