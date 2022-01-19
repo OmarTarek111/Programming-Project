@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1641507637 source:d:\assignment\dotsandlines\programmingproject\main.c
+1641576909 source:d:\assignment\dotsandlines\programmingproject\main.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -15,7 +15,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1641507755 source:d:\assignment\dotsandlines\programmingproject\game modes.c
+1641576948 source:d:\assignment\dotsandlines\programmingproject\game modes.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -24,9 +24,10 @@
 	"inGameActions.h"
 	"Grid.h"
 
-1641238765 source:d:\assignment\dotsandlines\programmingproject\grid function.c
+1641576504 source:d:\assignment\dotsandlines\programmingproject\grid function.c
 	<stdio.h>
 	<stdlib.h>
+	"Grid.h"
 
 1641504630 source:d:\assignment\dotsandlines\programmingproject\ingameactions.c
 	<stdio.h>
@@ -34,15 +35,15 @@
 	<math.h>
 	<string.h>
 
-1641504630 d:\assignment\dotsandlines\programmingproject\grid.h
+1641575427 d:\assignment\dotsandlines\programmingproject\grid.h
 
 1641506383 d:\assignment\dotsandlines\programmingproject\gamemodes.h
 
-1641503258 source:c:\users\eng 02\desktop\new folder (5)\programmingproject\computerplayer.c
+1641742952 source:d:\assignment\dotsandlines\backup\3\programmingproject\computerplayer.c
 	<stdio.h>
 	<stdlib.h>
 
-1641507755 source:c:\users\eng 02\desktop\new folder (5)\programmingproject\game modes.c
+1641749835 source:d:\assignment\dotsandlines\backup\3\programmingproject\game modes.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -51,21 +52,22 @@
 	"inGameActions.h"
 	"Grid.h"
 
-1641504631 c:\users\eng 02\desktop\new folder (5)\programmingproject\ingameactions.h
+1641748013 d:\assignment\dotsandlines\backup\3\programmingproject\ingameactions.h
 
-1641504630 c:\users\eng 02\desktop\new folder (5)\programmingproject\grid.h
+1641575427 d:\assignment\dotsandlines\backup\3\programmingproject\grid.h
 
-1641238765 source:c:\users\eng 02\desktop\new folder (5)\programmingproject\grid function.c
+1641742952 source:d:\assignment\dotsandlines\backup\3\programmingproject\grid function.c
 	<stdio.h>
 	<stdlib.h>
+	"Grid.h"
 
-1641504630 source:c:\users\eng 02\desktop\new folder (5)\programmingproject\ingameactions.c
+1641748019 source:d:\assignment\dotsandlines\backup\3\programmingproject\ingameactions.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<string.h>
 
-1641507637 source:c:\users\eng 02\desktop\new folder (5)\programmingproject\main.c
+1641750088 source:d:\assignment\dotsandlines\backup\3\programmingproject\main.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -73,5 +75,43 @@
 	"inGameActions.h"
 	"GameModes.h"
 
-1641506383 c:\users\eng 02\desktop\new folder (5)\programmingproject\gamemodes.h
+1641506383 d:\assignment\dotsandlines\backup\3\programmingproject\gamemodes.h
+
+1641742952 source:c:\users\eng 02\desktop\new folder (6)\programmingproject\computerplayer.c
+	<stdio.h>
+	<stdlib.h>
+
+1641827783 source:c:\users\eng 02\desktop\new folder (6)\programmingproject\game modes.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	"inGameActions.h"
+	"Grid.h"
+
+1641748013 c:\users\eng 02\desktop\new folder (6)\programmingproject\ingameactions.h
+
+1641575427 c:\users\eng 02\desktop\new folder (6)\programmingproject\grid.h
+
+1641763294 source:c:\users\eng 02\desktop\new folder (6)\programmingproject\grid function.c
+	<stdio.h>
+	<stdlib.h>
+	"Grid.h"
+
+1641748019 source:c:\users\eng 02\desktop\new folder (6)\programmingproject\ingameactions.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+
+1641752185 source:c:\users\eng 02\desktop\new folder (6)\programmingproject\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	"inGameActions.h"
+	"GameModes.h"
+
+1641506383 c:\users\eng 02\desktop\new folder (6)\programmingproject\gamemodes.h
 

@@ -1,0 +1,13 @@
+Game Mode: Player VS Player
+.__.  .
+|      
+.  .  .
+       
+.__.  .
+Turn = 2
+omar's Score = 0	alo's Score = 0
+
+
+
+
+----------------------------------------

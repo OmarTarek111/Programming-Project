@@ -13,6 +13,8 @@
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
 
+//the values used in the save and load arguments are all the values that the game modes functions need to operate the game
+
 void save(char player1Name[],int player1Score,char player2Name[],int player2Score,int currentIndex,int turn,int nd,int cells,int remainingSquares,int gameArr[],int gameMode)
 {
     system("cls");
@@ -48,6 +50,7 @@ void save(char player1Name[],int player1Score,char player2Name[],int player2Scor
     }
     fclose(fsave);
 }
+
 void load(char player1Name[],int *player1Score,char player2Name[],int *player2Score,int *computerScore,int *currentIndex,int *turn,int *nd,int *ndl, int *cells, int *remainingSquares,int gameArr[],int *gameMode)
 {
     int saved, wrong; char term;
@@ -101,37 +104,38 @@ void load(char player1Name[],int *player1Score,char player2Name[],int *player2Sc
 fclose(fsave);
 }
 
-void playerTurn(char playerName[], int playerScore, int *playerIndex, int nd, int ndl, int cells, int gameArr[], int *flag, int input, int *s1, int *s2)
+void playerTurn(char playerName[], int *playerScore, int *playerIndex, int nd, int ndl, int cells, int gameArr[], int *flag, int input, int *s1, int *s2)
 {
     *s1=0; *s2=0;
-    input=2*input-1;
-    if((input)%(ndl)==0)
+    input=2*input-1; //after the player enters his input i need to convert it to what it's actually is in the game array
+    if((input)%(ndl)==0)//this condition indicates that the player entered a line that's on the left outer edge of the grid
     {
-        *s1=input+1;
-        gameArr[input]=10+*playerIndex; gameArr[*s1]++;
-        if(gameArr[*s1]==4) {++*flag;gameArr[*s1]=(int)pow(-1,*playerIndex)*4;}
-    }else if((input)%(ndl)==2*nd-2)
+        *s1=input+1;//setting the square index to the square next to the line in the array
+        gameArr[input]=10+*playerIndex; gameArr[*s1]++;//the value stored in the gameArr[input] becomes 11 or 12 depending on the player input
+        if(gameArr[*s1]==4) {++*flag;gameArr[*s1]=(int)pow(-1,*playerIndex)*4;} /*i a square is completed then i increase the flag which i use to indicate
+         a square closing in the game mode function to increase his score, and setting the square index to -4 or 4 depending on the player index*/
+    }else if((input)%(ndl)==2*nd-2)//this condition means that the line will be on the right side of the game array
     {
         *s1=input-1;
         gameArr[input]=10+*playerIndex; gameArr[*s1]++;
         if(gameArr[*s1]==4){++*flag;gameArr[*s1]=(int)pow(-1,*playerIndex)*4;}
-    }else if((input)/(ndl)==0)
+    }else if((input)/(ndl)==0)//this condition means that the line is on the upper side of the game array
     {
         *s1=input+(ndl);
         gameArr[input]=10+*playerIndex; gameArr[*s1]++;
         if(gameArr[*s1]==4){++*flag;gameArr[*s1]=(int)pow(-1,*playerIndex)*4;}
-    }else if((input)/(ndl)==2*nd-2)
+    }else if((input)/(ndl)==2*nd-2)//this condition means that the line is on the lower side of the game array
     {
         *s1=input-(ndl);
         gameArr[input]=10+*playerIndex; gameArr[*s1]++;
         if(gameArr[*s1]==4){++*flag;gameArr[*s1]=(int)pow(-1,*playerIndex)*4;}
-    }else if(((input)/(ndl))%2==0)
+    }else if(((input)/(ndl))%2==0)//this condition means that the line is a horizontal one inside the game array so this time i need to change tow square indices instead of one
     {
         *s1=input-(ndl); *s2=input+(ndl);
         gameArr[input]=10+*playerIndex; gameArr[*s1]++; gameArr[*s2]++;
         if(gameArr[*s1]==4){++*flag;gameArr[*s1]=(int)pow(-1,*playerIndex)*4;}
         if(gameArr[*s2]==4){++*flag;gameArr[*s2]=(int)pow(-1,*playerIndex)*4;}
-    }else if(((input)/(ndl))%2!=0)
+    }else if(((input)/(ndl))%2!=0)//this condition means that the line is a vertical one inside the game array so this time i need to change tow square indices instead of one
     {
         *s1=input-1; *s2=input+1;
         gameArr[input]=10+*playerIndex; gameArr[*s1]++; gameArr[*s2]++;
