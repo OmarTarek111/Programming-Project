@@ -1,13 +1,1 @@
 Game Mode: Player VS Player
-.__.  .
-     
-.  .  .
-     
-.  .  .
-Turn = 2
-w's Score = 0	s's Score = 0
-
-
-
-
-----------------------------------------
